@@ -1,10 +1,10 @@
 # Lumen — Privacy Policy
 
-**Effective date:** 26 May 2026
+**Effective date:** 11 June 2026
 
 ## The short version
 
-Lumen is a personal diary app. Your entries, photos, and tags live on your own device. If you choose to enable backup, an encrypted copy is stored in a private folder inside *your own* Google Drive that only Lumen can read. We do not run any servers, we never see your diary, and we do not share, sell, or analyse your content.
+Lumen is a personal diary app. Your entries, photos, and tags are securely stored in the cloud using Firebase, a service provided by Google. We do not share, sell, or analyse your content for advertising purposes, and we only process this data to provide the app's core features.
 
 ## 1. Who we are
 
@@ -14,11 +14,11 @@ Lumen ("the app", "we", "us") is developed and maintained by an independent deve
 
 ### 2.1 Diary content you create
 
-Entries you write — titles, body text, mood selections, tags, and any photos you attach — are stored locally on your device in a SQLite database and a private files folder owned by the app. This content never leaves your device unless you explicitly enable Google Drive backup.
+Entries you write — titles, body text, mood selections, tags, and any photos you attach — are securely synced and stored in the cloud using Firebase, a backend service provided by Google. This allows you to access your diary across your devices.
 
-### 2.2 Google account information (only if you enable backup)
+### 2.2 Account information
 
-If you tap "Connect Google Drive" in Settings, the app uses Google Sign-In to obtain an OAuth access token scoped to `drive.appdata`. Through that process we receive your account email address and a profile identifier so the app can show which account is connected. We do **not** request access to your contacts, calendar, the rest of your Drive, or any other Google data.
+To provide syncing and secure access to your diary, we require you to sign in. Through this process, we receive basic profile information such as your email address and a profile identifier. We do **not** request access to your contacts, calendar, or other personal data.
 
 ### 2.3 Photos and camera
 
@@ -44,38 +44,29 @@ If you enable App Lock, the 4-digit PIN you set is one-way hashed (SHA-256, with
 
 We do not use your data for advertising, profiling, training machine-learning models, or any other purpose.
 
-## 4. Google Drive backup — what gets uploaded and where
+## 4. Cloud Storage via Firebase
 
-When you tap "Back up now" the app:
-
-- Serialises your diary entries (text, moods, tags, timestamps) into a single JSON file named `lumen_diary_backup.json`.
-- Uploads that file to the **Application Data Folder** of your Google Drive. This is a hidden folder that only the installed copy of Lumen on your authorised devices can read or write. It is not visible in your normal drive.google.com view.
-- Replaces any previous backup with the new one.
-
-**Photos are not currently uploaded** — only the diary database is backed up. If you uninstall the app, the photos remain only as long as you keep their copies elsewhere.
-
-The backup is stored within Google's infrastructure under *your* Google account. Their handling of that data is governed by Google's privacy policy: https://policies.google.com/privacy
+To provide seamless synchronization, your diary entries and attached media are stored in the cloud using Firebase, a secure backend service provided by Google. Firebase handles data storage securely within Google's infrastructure. You can learn more about how Google handles this data in the Google Privacy Policy: https://policies.google.com/privacy
 
 ## 5. Sharing of information
 
-We do not share, sell, rent, or trade any information with third parties. We have no servers and no database. The only data transfer the app performs is between your device and your own Google Drive account, initiated by you.
+We do not share, sell, rent, or trade any information with third parties for marketing or advertising purposes. We use third-party service providers like Firebase strictly to operate the app's infrastructure. They process your data only as necessary to provide the backend service.
 
 ## 6. Data security
 
-- Local data is stored in the app's private sandbox, which on modern Android is isolated from other apps.
-- App Lock (optional) requires a PIN or biometric to open the app.
-- The PIN is stored as a SHA-256 hash, not in plain text.
-- Drive uploads use HTTPS and are stored within Google's encrypted infrastructure.
+- Your data is synced over secure, encrypted connections (HTTPS).
+- App Lock (optional) requires a PIN or biometric to open the app on your device.
+- The PIN is stored locally as a SHA-256 hash, not in plain text.
+- Cloud data is hosted securely within Google's highly secure Firebase infrastructure.
 
-No system is perfectly secure. If you suspect your device or Google account has been compromised, please change your Google password and revoke Lumen's access from your Google account settings.
+No system is perfectly secure. If you suspect your account has been compromised, please change your credentials immediately.
 
 ## 7. Your rights and controls
 
 - **Read & edit** — all your entries are visible inside the app at any time.
 - **Delete an entry** — open the entry and tap "Delete entry".
-- **Delete the backup** — visit https://drive.google.com/drive/u/0/settings → "Manage apps" → find Lumen → "Delete hidden app data". Alternatively, tap "Disconnect" inside Lumen's Settings and the local copy of credentials is forgotten.
-- **Delete all local data** — uninstall the app, or use Android's app settings → Storage → Clear data.
-- **Revoke Drive access** — visit https://myaccount.google.com/permissions and remove Lumen.
+- **Delete your data** — you can request complete deletion of your account and all associated data by contacting us at jincefrancis63@gmail.com.
+- **Local data** — you can remove data cached on your device by uninstalling the app or clearing its data in Android settings.
 - **Request information** — email us at jincefrancis63@gmail.com with any privacy-related question; we will reply within 30 days.
 
 ## 8. Children's privacy
